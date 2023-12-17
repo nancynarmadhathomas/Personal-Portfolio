@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/15756c7bc4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#achievements">Achievements</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hello.I'm Nancy Narmadha.</h1>
+                <p>Student.<br>Currently pursuing a BSc in computer Science.<br>Passionate about learning new things.</p>
+            </div>
+        </div>
+    </div>
+<!-------about------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>I'm Nancy Narmadha.I'm currently pursuing a BSc in Computer Science.I want to become a web developer.I'm driven by a passion for continuous learning in web development.Future-focused web developer driven by a love for coding, transforming ideas into interactive websites that blend aesthetics with functionality."</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        <p class="tab-links" onclick="opentab('Project')">Project</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>HARD SKILLS<br>Programming Languages</span><br>C,C++,HTML,CSS,JavaScript and Python(Basics).</li>
+                            <li><span>Microsoft offfice</span><br>Word,Excel and Presentation.</li>
+                            <li><span>Web Development</span><br>Creating Web pages using HTML,CSS and JavaScript.</li>
+                            <li><span>SOFT SKILLS</span><br>Time Management,<br>Adaptability skills,<br>Team Building and <br>Problem solving.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2018-2019</span><br>I have completed my 10th grade at Rahmath Matric Hr sec school in Muthupet with a percentage of 87.</li>
+                            <li><span>2020-2021</span><br>I have completed my 12th grade at Rahmath Matric Hr sec school in Muthupet with a percentage of 90.</li>
+                            <li><span>2021-2024</span><br>I'm currently pursuing a BSc in Computer Science at Bon Secours College for Women in Thanjavur.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Project">
+                        <ul>
+                            <li><span>Personal portfolio website</span><br>Creating portfolio web page by using HTML,CSS and JavaScript</li>
+                            <li><a href="https://nancynarmadhathomas.github.io/Digital-Portfolio/">Portfolio</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----achievements------>
+    <div id="achievements">
+        <div class="container">
+            <h1 class="sub-title">My Achievements</h1>
+            <div class="achievements-list">
+            <div>
+                <h2>Technical events</h2>
+                <p>Introduction to web desinging Provided by Great Learning Academy.
+                            <br>Learn about being a Front End Developer Issued by IBM skillbuild.
+                                    <br>Learning python Provided by linkedin Learning.
+                                            <br>Foundations in coding and cloud program Issued by IBM skillbuild.</p>
+            </div>
+            <div>
+                <h2>Non Technical Events</h2>
+                <p>Effective Communication Provided by Great Learning Academy.<br>Building Your Team Provided by Linkedin Learning.<br>Mass Media Communication.</p>
+            </div>
+            <div>
+                <h2>Certification Programs</h2>
+                <p>Network Communication.<br>Hardware Security.<br>Mass Media communication.<br>Web Development Fundamentals Issued by IBM skillbuild.</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-------contact----------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-envelope"></i>nancynarmadha512@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>7904327211</p>
+                        <div class="social-icon">
+                            <a href="mailto:nancynarmadha512@gmail.com"><i class="fa-regular fa-envelope"></i>
+                            <a href="callto:7904327211"><i class="fa-solid fa-phone"></i></a>
+                            <a href="https://www.linkedin.com/in/nancy-narmadha-thomas-50953728a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                        <a href="resume.pdf.pdf" download class="btn btn2">DownloadCV</a>   
+                </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="Submit" class="btn btn2">Submit</button>
+                        </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Nancy.</p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+
+    </script>
+
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzZrAQB0_doJn0f80G-bWMyMAoRTHrgmd507C9lx9fFqnUzja4zofknVJAuLX4TUMKS-Q/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+  
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function(){
+                        msg.innerHTML = ""
+                    },5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+         })
+    </script>
+</body>
+</html>
